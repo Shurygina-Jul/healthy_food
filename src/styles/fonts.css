@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Philosopher";
+  src: url("../fonts/Philosopher.eot");
+  src: url("../fonts/Philosopher.woff") format("woff"),
+    url("../fonts/Philosopher.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto.eot");
+  src: url("../fonts/Roboto.woff") format("woff"),
+    url("../fonts/Philosopher.ttf") format("truetype");
+}

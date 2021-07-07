@@ -1,0 +1,22 @@
+:root {
+  --white: #ffffff;
+  --orange: #dc780b;
+  --black: #150c01;
+  --beige: #fbf1e7;
+  --light-silver: #e5e5e5;
+
+  --xx-small: 10px;
+  --x-small: 13px;
+  --small: 16px;
+  --medium: 18px;
+  --large: 20px;
+  --x-large: 27px;
+  --xx-large: 42px;
+  --leading-20: 20px;
+  --leading-24: 24px;
+  --leading-36: 36px;
+  --leading-42: 42px;
+  --leading-58: 58px;
+
+  --container: 1140px;
+}
