@@ -4,6 +4,9 @@
   --black: #150c01;
   --beige: #fbf1e7;
   --light-silver: #e5e5e5;
+  --green-01: rgba(143, 166, 50, 0.1);
+  --red-008: rgba(230, 77, 46, 0.08);
+  --orange-01: rgba(220, 120, 11, 0.1);
 
   --xx-small: 10px;
   --x-small: 13px;
@@ -15,6 +18,7 @@
   --leading-20: 20px;
   --leading-24: 24px;
   --leading-36: 36px;
+  --leading-40: 40px;
   --leading-42: 42px;
   --leading-58: 58px;
 

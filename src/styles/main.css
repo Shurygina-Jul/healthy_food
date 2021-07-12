@@ -1,7 +1,7 @@
 @import "variables.css";
 @import "reset.css";
 @import "fonts.css";
-/* @import "buttons.css"; */
+/* @import "sections.css"; */
 
 .capitalize {
   text-transform: capitalize;
@@ -21,6 +21,15 @@
 
 .grid {
   display: grid;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.text-center {
+  text-align: center;
 }
 
 body {
@@ -62,8 +71,9 @@ a {
   &__ghost {
     background-color: transparent;
     color: var(--orange);
-    opacity: 0.1;
+    /* opacity: 0.1; */
     border: 1.5px solid var(--orange);
+    padding: 13px 30px 14px;
   }
 }
 .container {
@@ -71,11 +81,50 @@ a {
   flex-direction: column;
   max-width: var(--container);
   margin: auto;
-  &__header {
-    flex-direction: row;
-    justify-content: space-between;
+}
+.h1 {
+  font-weight: bold;
+  font-size: 48.83px;
+  line-height: 58px;
+}
+.h2 {
+  font-family: Philosopher;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 31.25px;
+  &_lh-40 {
+    line-height: var(--leading-40);
+  }
+  &_lh-24 {
+    line-height: var(--leading-24);
   }
 }
+.h3 {
+  font-family: Philosopher;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: var(--leading-24);
+}
+.h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--orange);
+  opacity: 0.7;
+  line-height: var(--leading-24);
+}
+.p1 {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: var(--leading-24);
+  opacity: 0.7;
+}
+
 /* Header styles start */
 .header {
   margin-top: 32px;
@@ -88,6 +137,168 @@ a {
   opacity: 0.6;
   &__item {
     padding-right: 41px;
+    & :hover {
+      color: var(--orange);
+    }
+  }
+}
+.wrapper {
+  &__button {
+    margin-left: auto;
   }
 }
 /* Header styles end */
+
+/* Hero start */
+.hero {
+  padding-top: 162px;
+  padding-bottom: 100px;
+
+  &__container {
+    max-width: 555px;
+    margin-right: auto;
+  }
+  &__header {
+    margin-bottom: 28px;
+  }
+  &__discription {
+    margin-bottom: 66px;
+  }
+
+  &__button {
+    padding: 20px 40px;
+    &_ghost {
+      padding: 18px 38px;
+    }
+  }
+  &__button-list {
+    & :first-child {
+      margin-right: 16px;
+    }
+  }
+  &__image-wrapper {
+    background-image: url(../images/hero.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -44px;
+    right: 1px;
+    width: 801px;
+    height: 670px;
+    position: absolute;
+    z-index: -1;
+    &:after {
+      content: url(../images/hero-ellipse.svg);
+      position: absolute;
+      bottom: -30px;
+      right: 202px;
+    }
+  }
+}
+/* Hero end */
+.features {
+  padding-top: 142px;
+  padding-bottom: 108px;
+  &__subtitle {
+    line-height: var(--leading-20);
+    margin-bottom: 8px;
+  }
+  &__title {
+    margin-bottom: 40px;
+    line-height: var(--leading-36);
+  }
+  &__card {
+    &-list {
+      grid-template-columns: repeat(3, 300px);
+      grid-column-gap: 90px;
+      justify-content: center;
+      & li {
+        max-width: 300px;
+      }
+    }
+    &-title {
+      margin-bottom: 16px;
+    }
+  }
+}
+.card {
+  &__image-container {
+    width: 88px;
+    height: 88px;
+    position: relative;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 36px;
+    & img {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    &_green {
+      background: var(--green-01);
+    }
+    &_red {
+      background: var(--red-008);
+    }
+    &_orange {
+      background: var(--orange-01);
+    }
+  }
+}
+.about {
+  &__container {
+    flex-direction: row;
+  }
+  &:before {
+    content: url(../images/about/abstract .svg);
+    position: absolute;
+    top: -237px;
+    left: 0;
+  }
+
+  &__wrapper {
+    max-width: 486px;
+    margin-left: auto;
+    padding-top: 98px;
+  }
+  &__subtitle {
+    margin-bottom: 7px;
+  }
+  &__title {
+    margin-bottom: 22px;
+  }
+  &__description {
+    margin-bottom: 43px;
+  }
+  &__image {
+    width: 555px;
+    border-radius: 43px;
+    margin-bottom: 20px;
+    padding-top: 8px;
+  }
+  &__button {
+    padding: 12px 36px 12px 30px;
+  }
+}
+.menu {
+  padding-top: 96px;
+  &__header {
+    max-width: 748px;
+    margin: auto;
+    margin-bottom: 68px;
+  }
+  &__title {
+    margin-bottom: 34px;
+  }
+  &__cards-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+  }
+  &__card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 75px 10px 10px 10px;
+    &-image {
+      border-radius: 75px 10px 75px 0px;
+      margin-bottom: 22px;
+    }
+  }
+}
