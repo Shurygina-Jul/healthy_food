@@ -1,0 +1,22 @@
+.button {
+  font-family: "Roboto";
+  font-size: var(--small);
+  line-height: var(--leading-20);
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  border: unset;
+  border-radius: 5px;
+  background-color: var(--orange);
+
+  &__default {
+    font-weight: 400;
+    background-color: var(--orange);
+  }
+  &__ghost {
+    background-color: transparent;
+    color: var(--orange);
+    opacity: 0.1;
+    border: 1.5px solid var(--orange);
+  }
+}
