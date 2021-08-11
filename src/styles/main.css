@@ -1,6 +1,7 @@
 @import "variables.css";
 @import "reset.css";
 @import "fonts.css";
+@import "media.css";
 /* @import "sections.css"; */
 
 .capitalize {
@@ -135,6 +136,8 @@ a {
 /* Header styles start */
 .header {
   margin-top: 32px;
+  padding-left: 40px;
+  padding-right: 40px;
   &__logo {
     padding-right: 35px;
   }
@@ -158,8 +161,7 @@ a {
 
 /* Hero start */
 .hero {
-  padding-top: 162px;
-  padding-bottom: 100px;
+  padding: 162px 40px 100px;
 
   &__container {
     max-width: 555px;
@@ -203,8 +205,8 @@ a {
 }
 /* Hero end */
 .features {
-  padding-top: 142px;
-  padding-bottom: 108px;
+  padding: 142px 40px 108px;
+
   &__subtitle {
     line-height: var(--leading-20);
     margin-bottom: 8px;
@@ -252,6 +254,8 @@ a {
   }
 }
 .about {
+  padding-left: 40px;
+  padding-right: 40px;
   &__container {
     flex-direction: row;
   }
@@ -272,6 +276,7 @@ a {
   }
   &__title {
     margin-bottom: 22px;
+    max-width: 411px;
   }
   &__description {
     margin-bottom: 43px;
@@ -281,13 +286,14 @@ a {
     border-radius: 43px;
     margin-bottom: 20px;
     padding-top: 8px;
+    padding-right: 20px;
   }
   &__button {
     padding: 12px 36px 12px 30px;
   }
 }
 .menu {
-  padding: 96px 0 187px;
+  padding: 96px 40px 187px;
   &__header {
     max-width: 748px;
     margin: auto;
@@ -307,6 +313,7 @@ a {
     border-radius: 75px 10px 10px 10px;
     &-image {
       border-radius: 75px 10px 75px 0px;
+      min-width: 100%;
     }
     &-container {
       padding: 22px 25px 25px;
@@ -327,7 +334,7 @@ a {
 }
 .take {
   background: var(--cream);
-  padding: 114px 0 138px;
+  padding: 114px 40px 138px;
   &__container {
     max-width: 946px;
     margin: auto;
@@ -341,8 +348,9 @@ a {
   &__image {
     right: 245px;
     top: -65px;
+    z-index: 1;
     &_mask {
-      z-index: -1;
+      /* z-index: -1; */
       right: 229px;
       top: -92px;
     }
@@ -366,7 +374,7 @@ a {
   }
 }
 .testimonial {
-  padding: 213px 0 105px;
+  padding: 213px 40px 105px;
   &__container {
     max-width: 740px;
     margin: 0 auto;
@@ -436,7 +444,7 @@ a {
 }
 .contact {
   background-color: var(--beige);
-  padding: 114px 0 117px;
+  padding: 114px 40px 117px;
   &__container {
     max-width: 750px;
     margin: 0 auto;
@@ -469,7 +477,7 @@ a {
 .footer {
   background-color: #252525;
   color: var(--white-07);
-  padding: 137px 0 82px;
+  padding: 137px 40px 82px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -503,5 +511,156 @@ a {
     & li {
       margin: 2px 10px 0 -1px;
     }
+  }
+}
+
+/* media */
+/* laptop */
+@media (min-width: 1023px) and (max-width: 1311px) {
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 1022px) {
+  .features {
+    &__card-list {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+      margin: 0 auto;
+    }
+  }
+  .h1 {
+    font-size: 40.83px;
+    line-height: 50px;
+  }
+  .about__image {
+    width: 285px;
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .menu {
+    &__cards-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  .features {
+    &__card-list {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+      margin: 0 auto;
+    }
+  }
+  .take {
+    &__image {
+      display: none;
+    }
+    &__image_mask {
+      display: none;
+    }
+  }
+  .h1 {
+    font-size: 28.83px;
+    line-height: 36px;
+  }
+  .about {
+    &__title {
+      max-width: 300px;
+    }
+    &__image {
+      display: none;
+    }
+  }
+
+  .h2 {
+    font-size: 25.25px;
+    &_lh-40 {
+      line-height: var(--leading-36);
+    }
+    &_lh-24 {
+      line-height: var(--leading-20);
+    }
+  }
+  .h3 {
+    font-size: 18px;
+    line-height: var(--leading-20);
+  }
+  .h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--orange);
+    opacity: 0.7;
+    line-height: var(--leading-20);
+  }
+  .p1 {
+    font-size: 12px;
+    line-height: var(--leading-20);
+    opacity: 0.7;
+  }
+  .p2 {
+    font-size: 12px;
+    line-height: var(--leading-20);
+    color: var(--white);
+    margin-bottom: 26px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1222px) {
+  .menu {
+    &__cards-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .take {
+    &__image {
+      max-width: 270px;
+      right: 66px;
+      top: -22px;
+      z-index: 1;
+    }
+    &__image_mask {
+      right: 32px;
+      top: -69px;
+      max-width: 341px;
+    }
+    &__description-wrapper {
+      max-width: 382px;
+    }
+  }
+
+  .about__title {
+    max-width: 300px;
+  }
+  .h2 {
+    font-size: 25.25px;
+    &_lh-40 {
+      line-height: var(--leading-36);
+    }
+    &_lh-24 {
+      line-height: var(--leading-20);
+    }
+  }
+  .h3 {
+    font-size: 20px;
+    line-height: var(--leading-20);
+  }
+  .h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--orange);
+    opacity: 0.7;
+    line-height: var(--leading-20);
+  }
+  .p1 {
+    font-size: 14px;
+    line-height: var(--leading-20);
+    opacity: 0.7;
+  }
+  .p2 {
+    font-size: 14px;
+    line-height: var(--leading-20);
+    color: var(--white);
+    margin-bottom: 26px;
   }
 }
